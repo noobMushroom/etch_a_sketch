@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +9,22 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <div class="container">
         <div class="slider">
-            <div id="colorPicker">colour picker option</div>
+            <div id="colorPicker">
+                <span id="colorPicker"> <input type="color" id="color" value="#FF0000"></span>
+                <button id="randomColor">randomcolor</button>
+                <button id="eraser">erase</button>
+            </div>
             <span id="rangeValue"> value of range slider</span>
-            <input type="range" min="2" max="50" value="25" id="rangeSlider" >
-            <span id="colorPicker"> <input type="color" id="color"></span>
+            <input type="range" min="2" max="50" value="25" id="rangeSlider">
             <button id="apply">Apply</button>
+
+            <button id="reset">reset</button>
         </div>
     </div>
 </body>
+
 </html>
