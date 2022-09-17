@@ -14,15 +14,16 @@
     <div class="container">
         <div class="slider">
             <div id="colorPicker">
-                <span id="colorPicker"> <input type="color" id="color" value="#FF0000"></span>
-                <button id="randomColor">randomcolor</button>
-                <button id="eraser">erase</button>
+                <span id="colorPicker"> <input type="color" id="color" value="#FF0000" class="colorPick" name="pick"></span>
+                <button id="randomColor" class="colorPick" name="rainbow">randomcolor</button>
+                <button id="eraser" class="colorPick" name="eraser">erase</button>
             </div>
             <span id="rangeValue"> value of range slider</span>
             <input type="range" min="2" max="50" value="25" id="rangeSlider">
             <button id="apply">Apply</button>
 
             <button id="reset">reset</button>
+
         </div>
     </div>
 </body>

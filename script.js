@@ -1,6 +1,13 @@
 const container = document.querySelector('.container');
+const Colorbuttons= document.querySelectorAll(".colorPick")
+some=''
+Colorbuttons.forEach(button=>{
+    // console.log(button.name)
+    button.addEventListener('click',() =>some=button.name) 
+})
 
-// containing sub grid it will contain small divs
+
+// creating sub grid it will contain small divs
 const grid = document.createElement('div');
 grid.classList.add('grid');
 container.appendChild(grid)
@@ -41,52 +48,29 @@ function gridStyle(number) {
 
 // creating small divs.
 function numberOfSquares(number) {
+
     for (i = 1; i <= number * number; i++) {
         const board = document.createElement('div')
         board.classList.add("content")
         grid.appendChild(board)
+        const reset = document.getElementById('reset')
+        
+        reset.addEventListener('click', () => {
+            board.style.backgroundColor = '#FFC0CB'
+        })}
         const buttons = document.querySelectorAll('.content');
         buttons.forEach(button => {
-            button.addEventListener("mousemove", handle)
+            button.addEventListener("mousemove", (e) => {
+                if (some=="rainbow") {
+                    let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+                    e.target.style.backgroundColor = `#${randomColor}`
+                } else if (some=="pick") {
+                    const color = document.getElementById('color');
+                    e.target.style.backgroundColor = color.value
+                }else {
+                    e.target.style.backgroundColor = "pink"
+                }
+            })
+            
         })
-        const reset = document.getElementById('reset')
-
-        reset.addEventListener('click', () => board.style.background= '#FFC0CB')
-
-    }
 }
-
-
-// this handles every click and change div's color 
-function handle(e) {
-    let randomColor = Math.floor(Math.random() * 16777215).toString(16);
-    let random = randomColor1.onclick = color_picker_random
-    let eraser = '#FFC0CB';
-    const color = document.getElementById('color');
-    // e.target.style.backgroundColor = `${color_picker_random()}`;
-    e.target.style.backgroundColor = `${color.value}`;
-}
-
-
-
-// todo: somehow make three buttons which will decide the colours 
-const randomColor1 = document.getElementById('randomColor');
-const eraser = document.getElementById('eraser');
-
-
-// randomColor.onclick = color_picker_random
-// eraser.onclick = color_picker_eraser
-
-function color_picker_random() {
-    console.log('you clicked random ')
-    color = Math.floor(Math.random() * 16777215).toString(16);
-    console.log(`some${color}`)
-    return `#${color}`
-}
-
-function color_picker_eraser() {
-    console.log("you clicked the earaser ")
-    return '#FFC0CB'
-}
-
-
