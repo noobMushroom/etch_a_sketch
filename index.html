@@ -8,24 +8,34 @@
     <title>Etch a sketch</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Kaushan+Script&family=Unna:wght@700&display=swap');
+    </style>
 </head>
 
 <body>
+    <header class="head">ETCH A SKETCH</header>
     <div class="container">
+
         <div class="slider">
             <div id="colorPicker">
-                <span id="colorPicker"> <input type="color" id="color" value="#FF0000" class="colorPick" name="pick"></span>
-                <button id="randomColor" class="colorPick" name="rainbow">randomcolor</button>
-                <button id="eraser" class="colorPick" name="eraser">erase</button>
+                <span id="colorPicker"> <input type="color" id="color" value="#FF0000" class="colorPick"
+                        name="pick"></span>
+                <button id="randomColor" class="colorPick" name="rainbow">RAINBOW</button>
+                <button id="eraser" class="colorPick" name="eraser">ERASE</button>
+
+                <button class="colorPick" name="white" id="white">WHITE</button>
+                <button class="colorPick" name="black" id="black">BLACK</button>
             </div>
             <span id="rangeValue"> value of range slider</span>
             <input type="range" min="2" max="50" value="25" id="rangeSlider">
-            <button id="apply">Apply</button>
+            <button id="apply" class="colorPick">APPLY</button>
 
-            <button id="reset">reset</button>
+            <button id="reset" class="colorPick">RESET</button>
 
         </div>
     </div>
+    <footer class="foot">&copy Created by Mushroom</footer>
 </body>
 
 </html>

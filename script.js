@@ -17,7 +17,7 @@ const rangeSlider = document.getElementById('rangeSlider')
 const rangeValue = document.getElementById('rangeValue')
 rangeValue.innerHTML = rangeSlider.value;
 
-grid.textContent = "let's draw"
+grid.innerHTML = "Pick a color or rainbow <br> and the number of grids and start making <br> beautiful arts."
 
 
 // making apply button
@@ -56,7 +56,7 @@ function numberOfSquares(number) {
         const reset = document.getElementById('reset')
         
         reset.addEventListener('click', () => {
-            board.style.backgroundColor = '#FFC0CB'
+            board.style.backgroundColor = '#00FFEF'
         })}
         const buttons = document.querySelectorAll('.content');
         buttons.forEach(button => {
@@ -67,8 +67,12 @@ function numberOfSquares(number) {
                 } else if (some=="pick") {
                     const color = document.getElementById('color');
                     e.target.style.backgroundColor = color.value
+                }else if(some=='white'){
+                    e.target.style.backgroundColor = "white"
+                }else if(some=='black'){
+                    e.target.style.backgroundColor = "black"
                 }else {
-                    e.target.style.backgroundColor = "pink"
+                    e.target.style.backgroundColor = "#00FFEF"
                 }
             })
             
