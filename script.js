@@ -62,6 +62,7 @@ function numberOfSquares(number) {
         const buttons = document.querySelectorAll('.content');
         buttons.forEach(button => {
             button.addEventListener("mousemove", (e) => {
+                
                 if (some=="rainbow") {
                     let randomColor = Math.floor(Math.random() * 16777215).toString(16);
                     e.target.style.backgroundColor = `#${randomColor}`
@@ -72,6 +73,8 @@ function numberOfSquares(number) {
                     e.target.style.backgroundColor = "white"
                 }else if(some=='black'){
                     e.target.style.backgroundColor = "black"
+                }else if (some==''){
+                    e.target.style.backgroundColor = `#FF0000`
                 }else {
                     e.target.style.backgroundColor = "#00FFEF"
                 }
