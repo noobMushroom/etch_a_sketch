@@ -41,7 +41,8 @@ rangeSlider.oninput = function () {
 }
 
 function gridStyle(number) {
-    grid.setAttribute(`style`, `background:blue; width:600px; height:600px; display:grid; grid-template-columns:repeat(${number}, 1fr);`)
+    grid.setAttribute(`style`, `background:blue; width:600px; height:600px; display:grid; grid-template-columns:repeat(${number}, 1fr); box-shadow: inset 0 -3em 3em rgba(6, 4, 4, 0.944), 0 0 0 2px rgb(40, 31, 31),
+    0.3em 0.3em 1em rgba(82, 80, 80, 0.696);`)
 }
 
 

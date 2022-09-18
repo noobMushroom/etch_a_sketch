@@ -23,11 +23,6 @@
 }
 
 
-.content:hover {
-
-    background-color: black;
-}
-
 #rangeSlider {
     margin-top: 10px;
     margin-bottom: 35px;
@@ -90,7 +85,8 @@
 
 .grid{
     font-size: 40px;
-    font-family:'Kaushan Script', cursive;;
+    font-family:'Kaushan Script', cursive;
+    
 }
 
 
